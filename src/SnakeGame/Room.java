@@ -123,7 +123,6 @@ public class Room {
         System.out.println();
         System.out.println();
     }*/
-
     public void print() {
         if (KeyboardObserver.frame != null) {
             KeyboardObserver.frame.setContentPane(new Layer());
@@ -170,6 +169,7 @@ public class Room {
             int delay = level < 15 ? (initialDelay - delayStep * level) : 200;
             Thread.sleep(delay);
         } catch (InterruptedException e) {
+            e.getStackTrace();
         }
     }
 }
